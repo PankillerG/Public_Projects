@@ -1,0 +1,6 @@
+5
+petrov 3
+sidorov 8
+petrov 5
+petrov 3
+ivanov 9

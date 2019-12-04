@@ -1,0 +1,56 @@
+    std::vector <std::vec    stdd::pair <        std::pair<in            int l_t        at            min = data[par              min_c = l_c;
+             a            if (l_c <= ze                         a            if (l_c <= ze              _;
+                       min_c = lpai                min_c = l_c;
+         t          2;         t             }
+             )                [point1_1].push_back(std::make_pair(point2_2, len_));
+            in_list[point2_2].push_back(std::                               }
+           ount = 0;
+    std::set <int> points_not_used;
+    int i;
+    i = 0;
+    while (i < n) {
+        points_not_used.insert(i);
+        i++;
+    }
+
+    my_heap queue(n - 1);
+    std::set <int> points_used;
+    points_used.insert(0);
+         s_not_used.e        }
+    }
+
+    void print() {
+        for (auto i        for (auto i        fo
+
+int      }
+
+ us
+   ck(        for (auto i
+int main() {
+    int n, m;
+    std::cin >> n
+ _list[0]) {
+        int temp = el.first - 1;
+                     el;
+    }
+
+    queue.make_heap(pr_l);
+    queue.print();
+
+    while (queue.size() != 0) {
+        auto c = queue.ExtractMin();
+        count += c.second;
+        points_used.insert(c.first);
+        points_not_used.erase(c.first);
+        queue.print();
+
+        for (auto el : in_list[c.first]) {
+            if (points_not_used.find(el.first) != points_not_used.end()) {
+                queue.DecreaseKey(el);
+        queue.print();
+            }
+        }
+    }
+    std::cout << count;
+}
+

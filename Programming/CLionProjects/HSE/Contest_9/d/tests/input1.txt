@@ -1,0 +1,15 @@
+123 ivan 3
+124 masha 1
+125 petr 1
+126 masha 2
+127 masha 3
+128 ivan 3
+129 petr 2
+130 liza 3
+131 masha 3
+132 petr 2
+133 masha 3
+134 petr 3
+135 ivan 3
+136 masha 3
+137 liza 3

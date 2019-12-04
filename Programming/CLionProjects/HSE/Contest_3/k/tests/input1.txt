@@ -1,0 +1,10 @@
+3
+MSU 1
+HSE 2
+MIPT 100
+5
+Ivan Ivanov 1 1 1900 100 2 MSU HSE
+Petr Petrov 2 1 1900 90 2 MSU HSE
+Alexander Sidorov 3 1 1900 110 2 MIPT HSE
+Ivan Petrov 3 1 1900 100 3 HSE MSU MIPT
+Petr Ivanov 4 1 1900 80 1 HSE

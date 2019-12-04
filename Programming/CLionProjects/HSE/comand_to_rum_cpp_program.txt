@@ -1,0 +1,2 @@
+g++ <name of file>.cpp && ./a.out
+g++ --std=c++17 main.cpp && ./a.out

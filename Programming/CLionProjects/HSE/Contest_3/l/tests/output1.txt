@@ -1,0 +1,3 @@
+ivanov	70	90	0
+petrov	0	0	50
+sidorov	40	0	40

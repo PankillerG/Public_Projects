@@ -1,0 +1,9 @@
+3
+2
+sidorov 40
+ivanov 70
+1
+ivanov 90
+2
+petrov 50
+sidorov 40

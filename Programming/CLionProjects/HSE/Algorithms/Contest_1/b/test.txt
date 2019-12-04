@@ -1,0 +1,71 @@
+#include <iostream>
+#include <tuple>
+#include <vector>
+#include <queue>
+#include <cmath>
+#include <utility>
+#include <algorithm>
+
+
+using namespace std;
+
+using T = vector<vector<tuple<long, long, long>>>;
+
+long dejkstra(long start, long finish, const T& graph, long weight) {
+    long n;
+    n = graph.size();
+    using F= tuple<long, long>;
+    priority_queue<F, std::vector<F>, greater<F>> pq;
+    pq.push(make_tuple(0, start));
+    long max_dist = 3000000;
+    vector<long> dist(n, max_dist);
+    dist[start] = 0;
+    while (!pq.empty()) {
+        long cur_distance, cur;
+        tie(cur_distance, cur) = pq.top();
+        pq.pop();
+        if (cur_distance > dist[cur])
+            continue;
+        for (auto& tup : graph[cur]) {
+            long adj, length, max_weight, adj_distance;
+            tie(adj, length, max_weight) = tup;
+            adj_distance = cur_distance + length;
+            if (dist[adj] > adj_distance && max_weight >= weight) {
+                pq.push(make_tuple(adj_distance, adj));
+                dist[adj] = adj_distance;
+            }
+        }
+
+    }
+    if (dist[finish] != max_dist) {
+        return dist[finish];
+    } else {
+        return long(-1);
+    }
+};
+
+
+int main() {
+    long n, m;
+    cin >> n >> m;
+    T graph(n);
+    for (long i = 0; i < m; ++i) {
+        long st, fn, l, w;
+        cin >> st >> fn >> l >> w;
+        st--; fn--;
+        graph[st].push_back(make_tuple(fn, l, w));
+        graph[fn].push_back(make_tuple(st, l, w));
+    }
+    long l = 0, r = 10000000 + 100, mid, val_mid;
+    while (r - l > 1) {
+        mid = (l + r) / 2;
+        val_mid = dejkstra(0, n - 1, graph, mid * 100 + 3000000);
+        if (val_mid >= 0 && val_mid <= 24 * 60) {
+            l = mid;
+        } else {
+            r = mid;
+        }
+    }
+    cout << min(long(10000000), long(l));
+    return 0;
+}

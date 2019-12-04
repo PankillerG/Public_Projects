@@ -1,0 +1,5 @@
+file1 = open('input.txt', 'r', encoding='utf-8')
+file2 = open('output.txt', 'w', encoding='utf-8')
+firstList = set(map(int, input().split()))
+secondList = set(map(int, input().split()))
+print(*sorted(firstList & secondList))

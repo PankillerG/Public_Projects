@@ -1,0 +1,3 @@
+masha 4
+ivan 3
+liza 2

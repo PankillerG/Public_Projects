@@ -1,0 +1,9 @@
+2
+1 1 a 1
+0 1 b 0
+5
+a
+b
+ab
+aba
+abab

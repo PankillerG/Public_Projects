@@ -1,0 +1,3 @@
+HSE	Ivan Petrov	Petr Petrov
+MIPT	Alexander Sidorov
+MSU	Ivan Ivanov
